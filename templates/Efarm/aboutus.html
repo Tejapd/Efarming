@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>L3Coder || Teja & Samyuktha</title>
+
+  <title>Teja & Samyuktha</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color: #B3E5FC;">
+  {%if request.user.is_authenticated%}
+    {% include "Efarm/customer_navbar.html" %}
+  {%else%}
+    {% include "Efarm/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+  <div style="text-align: center; margin: 0 auto; max-width: 800px; font-family: Arial, sans-serif; font-size: 18px; line-height: 1.6;">
+    <style>
+      body {
+        margin: 0; /* Removes default body margin */
+        padding: 0;
+      }
+      h3 {
+        margin-top: 10px; /* Adjust top margin of the heading */
+        font-size: 22px;
+        color: #0288D1;
+      }
+    </style>
+  
+    <h3>Welcome to Efarming</h3>
+    <p>
+      A revolutionary platform designed to connect farmers directly with consumers, eliminating the need for intermediaries. 
+      Our mission is to empower farmers by providing a fair marketplace where they can sell their agricultural products 
+      directly to customers, ensuring fresh, high-quality produce is delivered to your doorstep.
+    </p>
+    <p>
+      We aim to bridge the gap between rural farmers and urban consumers using technology like smartphones and SMS. With 
+      Efarming, we ensure:
+    </p>
+    <ul style="text-align: left; margin: 0 auto; display: inline-block; padding-left: 20px;">
+      <li><b>Freshness:</b> Direct farm-to-table delivery.</li>
+      <li><b>Fair Trade:</b> Farmers receive the true value for their hard work.</li>
+      <li><b>Convenience:</b> Seamless online and SMS-based ordering.</li>
+    </ul>
+    <p>
+      Whether you’re looking for fresh vegetables, grains, or dairy, Efarming simplifies the process, supports local 
+      farmers, and promotes sustainable practices.
+    </p>
+  </div>
+   
+  
+  <div style="font-family: Arial, sans-serif; margin: 50px auto; max-width: 800px; line-height: 1.6; text-align: center;">
+    <h2 style="color: #0288D1;">Our Mission</h2>
+    <p style="font-size: 18px; color: #333;">
+      To create a sustainable and equitable food supply chain that benefits both farmers and consumers, leveraging the power of technology to build a better tomorrow.
+    </p>
+  
+    <h2 style="color: #0288D1; margin-top: 30px;">Contact Us</h2>
+    <p style="font-size: 18px; color: #333;">
+      📞 <b>Phone:</b> +91-9346889208<br>
+      📧 <b>Email:</b> <a href="mailto:Tejapuli06@gmail.com" style="color: #0288D1; text-decoration: none;">tejapuli06@gmail.com</a>
+    </p>
+  </div>
+  
+  {% include "Efarm/footer.html" %}
+</body>
+<!--
+developed By : Teja & Samyuktha
+facebook : fb.com
+youtube : youtube.com
+-->
+
+</html>

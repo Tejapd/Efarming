@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>L3Coder || Teja & Samyuktha </title>
+
+
+</head>
+
+<body style="background-color: #B3E5FC;">
+
+  {%if request.user.is_authenticated%}
+    {% include "Efarm/customer_navbar.html" %}
+  {%else%}
+    {% include "Efarm/navbar.html" %}
+  {%endif%}
+
+  <center>
+    <h3 class='alert alert-success'>We'd love to hear from you! Please fill out the form below to get in touch with us. !</h3>
+
+    <form method="POST">
+      <!-- Very Important csrf Token -->
+      {% csrf_token %}
+      <div class="form-group">
+        <p>
+        <h3>{{ form.as_p }}</h3>
+        </p>
+        <br>
+        <input type="submit" value="Send Message" class='btn btn-primary btn-lg'>
+      </div>
+    </form>
+  </center>
+  {% include "Efarm/footer.html" %}
+</body>
+<!--
+developed By : Teja & Samyuktha
+facebook : fb.com
+youtube : youtube.com
+-->
+
+</html>
